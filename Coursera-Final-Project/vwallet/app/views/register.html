@@ -1,0 +1,69 @@
+﻿
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+
+            
+
+
+            <div class="row">
+
+                <div class="col-xs-11 col-xs-offset-1 title" ng-controller="RegisterController">
+                    Sing Up
+
+                </div>
+                <div class="col-xs-12 col-xs-offset-1 ">
+                    <br /><br />
+
+                    <form class="form-horizontal" role="form" id="registerForm" name="registerForm" ng-submit="saveUser()" novalidate>
+
+                        <div class="form-group" 
+                             ng-class="{ 'has-error' : registerForm.firstname.$error.required && !registerForm.firstname.$pristine }">
+
+                            <div class="col-xs-4">
+                                <input type="text" ng-model="user.firstname" class="form-control" id="firstname" name="firstname" placeholder="Firstname" required>
+                                <span ng-show="registerForm.firstname.$error.required && !registerForm.firstname.$pristine" class="help-block">The firstname is required.</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" ng-model="user.lastname" class="form-control" id="lastname" name="lastname" placeholder="Lastname" required>
+                                <span ng-show="registerForm.lastname.$error.required && !registerForm.lastname.$pristine" class="help-block">The lastname is required.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{ 'has-error' : registerForm.email.$error.required && !registerForm.email.$pristine }">
+                            <div class="col-xs-8">
+                                <input type="text" ng-model="user.email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                <span ng-show="registerForm.email.$error.required && !registerForm.email.$pristine" class="help-block">The emaile is required.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{ 'has-error' : registerForm.password.$error.required && !registerForm.password.$pristine }">
+                            <div class="col-xs-4">
+                                <input type="text" ng-model="user.password" class="form-control" id="password" name="password" placeholder="Password" required>
+                                <span ng-show="registerForm.password.$error.required && !registerForm.password.$pristine" class="help-block">The password is required.</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" ng-model="user.repassword" class="form-control" id="repassword" name="repassword" placeholder="Repeat password" required>
+                                <span ng-show="registerForm.repassword.$error.required && !registerForm.repassword.$pristine" class="help-block">Repeat password is required.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="loginForm.rememberMe"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-offset-5 col-xs-7">
+                                <button type="submit" class="btn btn-primary" ng-disabled="registerForm.$invalid">
+                                    Sing Up
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+

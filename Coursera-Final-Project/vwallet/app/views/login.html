@@ -1,0 +1,39 @@
+﻿<div class="nav-bar">
+
+    <div class="row">
+
+        <div class="col-xs-12 col-xs-offset-6 " ng-controller="LoginController">
+            <form class="form-horizontal" role="form" id="loginForm" name="loginForm" ng-submit="login()" novalidate>
+
+                <div class="form-group" ng-class="{ 'has-error' : loginForm.email.$error.required && !loginForm.email.$pristine }">
+                    <div class="col-xs-4 ">
+                        <input type="text" ng-model="user.email" class="form-control input-xs" id="email" name="email" placeholder="Email" required>
+                        <span ng-show="loginForm.email.$error.required && !loginForm.email.$pristine" class="help-block">The emaile is required.</span>
+                    </div>
+                </div>
+
+                <div class="form-group " ng-class="{ 'has-error' : loginForm.password.$error.required && !loginForm.password.$pristine }">
+                    <div class="col-xs-4 ">
+                        <input type="text" ng-model="user.password" class="form-control input-xs" id="password" name="password" placeholder="Password" required>
+                        <span ng-show="loginForm.password.$error.required && !loginForm.password.$pristine" class="help-block">The password is required.</span>
+                    </div>
+                </div>
+
+                <div class="form-group btn-xs form-inline">
+                    <div class="col-xs-4  checkbox input-xs ">
+                        <label>
+                            <input type="checkbox" ng-model="loginForm.rememberMe"> Remember me
+                        </label>
+                        <div class="col-xs-push-10 col-xs-1">
+                            <button type="submit" class="btn btn-primary btn-xs" ng-disabled="loginForm.$invalid">
+                                LogIn
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

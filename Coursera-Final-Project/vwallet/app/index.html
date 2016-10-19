@@ -1,0 +1,49 @@
+﻿<html lang="en" ng-app="vwalletApp">
+    <head>
+        <!-- Bootstrap -->
+        <!-- Plantilla tomada de:  https://github.com/BlackrockDigital/startbootstrap-simple-sidebar -->
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <link href="../bower_components/ng-dialog/css/ngDialog.min.css" rel="stylesheet">
+        <link href="../bower_components/ng-dialog/css/ngDialog-theme-plain.min.css" rel="stylesheet">
+        <link href="../bower_components/ng-dialog/css/ngDialog-theme-default.min.css" rel="stylesheet">
+
+        <link href="../app/styles/style.css" rel="stylesheet">
+        <link href="../app/styles/BasicStyle.css" rel="stylesheet">
+    </head>
+    
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div ui-view="sidebar">  </div>
+        
+        <!-- Nav-bar -->
+        <div ui-view="navBar">  </div>
+
+        <!-- Page Content -->
+        <div ui-view="content"> </div>
+        
+       
+    </div>
+   
+    <!-- Angular reference  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="../bower_components/ng-dialog/js/ngDialog.min.js"></script>
+    
+    
+    
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/services.js"></script>
+
+
+
+</body>
+    
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "vwallet",
+  "version": "1.0.0",
+  "description": "Personal Finance Application  Vwallet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lina Patino",
+  "license": "MIT"
+}

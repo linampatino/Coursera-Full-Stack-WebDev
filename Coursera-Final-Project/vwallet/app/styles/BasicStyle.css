@@ -1,0 +1,32 @@
+﻿.title {
+    font-size:x-large;
+    font-weight:bold;
+}
+
+hr {
+    height: 3px;
+    background: #fccb05;
+}
+
+.nav-bar  {
+    height: 120px;
+    font-size: large;
+    line-height: 60px;
+    padding-left: 30px;
+    padding-right: 0px;
+    padding-top: 12px;
+    border-left-width:medium;
+    background: #f7f7f7;
+    align-content:center;
+    text-align:center;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-label {
+    text-align:right;
+}
